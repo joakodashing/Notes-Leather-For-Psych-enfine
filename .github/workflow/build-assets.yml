@@ -1,0 +1,18 @@
+name: Build Assets
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v3
+
+      - name: Run a script to process assets
+        run: |
+          echo "Aquí ejecutas tus scripts para generar assets"
+          # Ejemplo: python scripts/build_spritesheet.py
