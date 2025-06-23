@@ -1,21 +1,22 @@
 # Notes Leather for Psych Engine
 
-Repositorio con los assets originales del mod Notes Leather para Psych Engine.
+Repository containing the original assets of the Notes Leather mod for Psych Engine.
 
-## Estructura de carpetas
+## Folder Structure
 
-- `/assets/images/` — imágenes PNG de las notas y flechas  
-- `/assets/xml/` — archivo XML con la definición de la spritesheet
+- `/assets/images/` — PNG images for the notes and arrows (including the spritesheet)  
+- `/assets/xml/` — XML file with the spritesheet definition (`default.xml`)
 
-## Uso
+## Usage
 
-- Este repositorio contiene los recursos necesarios para usar el estilo Notes Leather en Psych Engine.  
-- Asegúrate de importar correctamente el XML y las imágenes en tu motor o mod.
+- This repository contains the necessary resources to use the Notes Leather style in Psych Engine.  
+- Make sure to correctly import the XML and images into your mod or engine.
 
-## Contribuciones
+## Contributions
 
-Si quieres colaborar, puedes hacer un fork y pull request con mejoras o nuevos assets.
+Feel free to fork and create pull requests with improvements or new assets.
 
-## Contacto
+## Contact
 
-Para dudas o sugerencias, contáctame por GitHub Issues o mensaje directo.
+For questions or suggestions, please open a GitHub Issue or contact me directly.
+
