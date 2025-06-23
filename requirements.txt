@@ -1,4 +1,1 @@
-git add scripts/build_assets.py requirements.txt .github/workflows/build.yml
-git commit -m "Agregar script de validación de assets y workflow GitHub Actions"
-git push origin main
 
