@@ -23,3 +23,11 @@ jobs:
 
       - name: Run asset build script
         run: python scripts/build_assets.py
+
+      - name: Upload assets as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LeatherAssets
+          path: |
+            assets/xml/default.xml
+            assets/images/default.png
