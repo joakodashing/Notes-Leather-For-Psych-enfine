@@ -3,8 +3,8 @@ import xml.etree.ElementTree as ET
 from PIL import Image
 
 # Rutas
-XML_PATH = "assets/xml/notas.xml"
-IMAGES_DIR = "assets/images"
+XML_PATH = "assets/xml/default.xml"
+IMAGES_DIR = "assets/images/default.png"
 EXPECTED_SIZE = (2450, 1900)  # Cambia esto según tus requisitos
 
 def check_xml_exists():
