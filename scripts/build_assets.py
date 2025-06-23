@@ -2,10 +2,10 @@ import os
 import xml.etree.ElementTree as ET
 from PIL import Image
 
-# Rutas
+# Rutas actualizadas
 XML_PATH = "assets/xml/default.xml"
-IMAGES_DIR = "assets/images/default.png"
-EXPECTED_SIZE = (2450, 1900)  # Cambia esto según tus requisitos
+IMAGES_DIR = "assets/images"
+EXPECTED_SIZE = (2450, 1900)  # Ancho x Alto en píxeles
 
 def check_xml_exists():
     if os.path.isfile(XML_PATH):
@@ -54,20 +54,5 @@ def parse_xml_notes():
         notes = set()
         for subtexture in root.findall('SubTexture'):
             name = subtexture.attrib.get('name', '')
-            # Asumimos formato: "left press0000"
+            # Extrae base sin números
             base_name = ''.join([i for i in name if not i.isdigit()]).strip()
-            notes.add(base_name)
-
-        notes = sorted(notes)
-        print(f"Notas y animaciones encontradas en XML:")
-        for note in notes:
-            print(f" - {note}")
-    except Exception as e:
-        print(f"Error parseando XML: {e}")
-
-if __name__ == "__main__":
-    if check_xml_exists():
-        png_files = check_images_exist()
-        if png_files:
-            validate_image_sizes(png_files)
-        parse_xml_notes()
