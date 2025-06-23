@@ -8,11 +8,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
 
-      - name: Run a script to process assets
-        run: |
-          echo "Aquí ejecutas tus scripts para generar assets"
-          # Ejemplo: python scripts/build_spritesheet.py
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run asset build script
+        run: python scripts/build_spritesheet.py
